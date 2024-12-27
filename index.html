@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Imagem ao Clicar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #image {
+            display: none;
+            margin-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Clique no link para exibir a imagem</h1>
+    <a href="#" id="showImageLink">Clique aqui!</a>
+    <img id="image" src="Niggelanço.png" alt="Imagem personalizada" width="300">
+    
+    <script>
+        document.getElementById('showImageLink').addEventListener('click', function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do link
+            const image = document.getElementById('image');
+            image.style.display = image.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
